@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: hold-the-line-relay
+    runtime: node
+    rootDir: .
+    buildCommand: npm install
+    startCommand: node server/index.js
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+  - type: web
+    name: hold-the-line-client
+    runtime: static
+    buildCommand: npm install && npm run build
+    staticPublishPath: ./dist
