@@ -9,4 +9,3 @@ export default defineConfig({
     strictPort: true,
   },
 })
-Vite dev server port changed to 10000 in vite.config.ts. Run npm run dev and it will serve on http://localhost:10000.
